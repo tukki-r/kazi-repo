@@ -1,0 +1,15 @@
+.main
+  - @report.each do |report|
+    .main__contents
+      .main__contents__left-box
+        .main__contents__left-box_image
+        .main__contents__left-box_name
+          山中
+      .main__contents__center-box
+        .main__contents__center-box_check-box
+          = report.checkbox
+          を完了しました!
+        .main__contents__center-box_create
+          = report.created_at.strftime("%Y-%m-%d %H:%M")
+      .main__contents__right-box__image{ style: "background-image: url(#{report.image });"}
+  = paginate(@report)

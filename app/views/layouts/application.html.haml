@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title 家事レポ
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  
+  .header
+    = link_to root_path, class:"header__left-box" do
+      家事レポ
+    .header__right-box
+      = link_to "#", class:"header__right-box_name" do
+        木村
+      = link_to new_report_path, class:"header__right-box_new-post" do
+        新規投稿
+      = link_to "#", class:"header__right-box_login" do
+        ログイン
+  
+  %body
+    = yield
