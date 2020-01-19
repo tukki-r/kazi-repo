@@ -4,12 +4,13 @@
       .main__contents__left-box
         .main__contents__left-box_image
         .main__contents__left-box_name
-          山中
+          = report.user.nickname
       .main__contents__center-box
         .main__contents__center-box_check-box
           = report.checkbox
           を完了しました!
         .main__contents__center-box_create
           = report.created_at.strftime("%Y-%m-%d %H:%M")
-      .main__contents__right-box__image{ style: "background-image: url(#{report.image });"}
-  = paginate(@report)
+      = image_tag report.image, class: 'main__contents__right',size: "300x200"
+  .main__fotter
+    = paginate(@report)

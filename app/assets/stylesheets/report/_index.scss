@@ -7,26 +7,26 @@
   justify-content: space-between;
   padding: 0 45px;
   font-size: 25px;
+  position: fixed;
+  top: 0;
   .header__left-box{
     text-decoration: none;
   }
   .header__right-box{
-    .header__right-box_name{
+    .header__right-box__name{
       text-decoration: none;
+      margin-right: 15px;
     }
-    .header__right-box_new-post{
+    .header__right-box__btn{
       text-decoration: none;
       margin: 20px;
-    }
-    .header__right-box_login{
-      text-decoration: none;
     }
   }
 } 
 .main{
   background-color: rgb(234, 234, 238);
   height: 700px;
-  margin: 50px;
+  margin: 120px;
   .main__contents{
     background-color: rgb(243, 241, 241);
     display: flex;
@@ -54,12 +54,17 @@
         font-size: 30px;
       }
     }
-    .main__contents__right-box__image{
+    .main__contents__right{
       border: 1px solid;
       height: 150px;
       width: 250px;
       margin-right: 100px;
 
     }
+  }
+  .main__fotter{
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
   }
 }

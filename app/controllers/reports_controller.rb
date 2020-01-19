@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
 
   def index
-    @report = Report.all.order("created_at DESC").page(params[:page]).per(5)
+    @report = Report.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
@@ -15,6 +15,6 @@ class ReportsController < ApplicationController
 
   private 
     def report_params
-      params.require(:report).permit(:checkbox, :image)
+      params.require(:report).permit(:checkbox, :image).merge(user_id: current_user.id)
     end
 end

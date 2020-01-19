@@ -12,5 +12,7 @@
     買い物
     = f.radio_button :checkbox, "洗い物"
     洗い物
-    = f.text_field :image, placeholder: "写真のURL"
+    = f.file_field :image
+    = icon('fa','image',class: 'icon')
+    %input.hidden{type: 'file'}
     = f.submit "送信"

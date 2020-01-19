@@ -1,0 +1,15 @@
+.detail{
+  background-color: darkgray;
+  height: 1000px;
+  width: 1000px;
+  margin: 170px;
+  .detail__user-name{
+    font-size: 35px;
+    text-align: center
+  }
+  .detail__checkbox{
+    text-align: center;
+    margin: 20px;
+    font: 30px;
+  }
+}
