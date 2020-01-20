@@ -9,12 +9,12 @@
   
   .header
     = link_to root_path, class:"header__left-box" do
-      家事レポ
+      kaji-repo
     .header__right-box
-      = link_to user_path(current_user), class:"header__right-box__name" do
-        = current_user.nickname
-        さんのやった家事/
       -if user_signed_in?
+        = link_to user_path(current_user), class:"header__right-box__name" do
+          = current_user.nickname
+          さんの家事一覧
         = link_to new_report_path, class: "header__right-box__btn" do
           家事を投稿する
         = link_to destroy_user_session_path, method: :delete, class: "header__right-box__btn" do

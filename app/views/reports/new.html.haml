@@ -2,17 +2,31 @@
   .form__post
     投稿画面
   = form_for [@report] do |f|
-    = f.radio_button :checkbox, "洗濯" 
-    洗濯
-    = f.radio_button :checkbox, "掃除" 
-    掃除
-    = f.radio_button :checkbox, "料理"    
-    料理
-    = f.radio_button :checkbox, "買い物"  
-    買い物
-    = f.radio_button :checkbox, "洗い物"
-    洗い物
-    = f.file_field :image
-    = icon('fa','image',class: 'icon')
-    %input.hidden{type: 'file'}
-    = f.submit "送信"
+    .form__checkbox
+      %label
+        .check
+          = f.radio_button :checkbox, "洗濯" 
+          洗濯
+      %label
+        .check
+          = f.radio_button :checkbox, "掃除" 
+          掃除
+      %label
+        .check
+          = f.radio_button :checkbox, "料理"    
+          料理
+      %label
+        .check
+          = f.radio_button :checkbox, "買い物"  
+          買い物
+      %label
+        .check
+          = f.radio_button :checkbox, "洗い物"
+          洗い物   
+      %label
+        = icon('fa','image',class: 'icon')
+        .hidden
+          = f.file_field :image
+    .form__submit
+      = f.submit "送信"
+

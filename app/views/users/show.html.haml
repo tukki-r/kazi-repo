@@ -2,20 +2,20 @@
   .detail__fix
     .detail__fix__user-name
       = @user.nickname
-      さんの投稿 
+      さんの投稿
       %br
       やり忘れはありませんか？
     .detail__fix__checkbox
-      =check_box_tag :check1
-      洗濯
-      =check_box_tag :check1
-      掃除
-      =check_box_tag :check1
-      料理
-      =check_box_tag :check1
-      買い物
-      =check_box_tag :check1
-      洗い物
+      =check_box_tag :check1 
+      = label_tag :check1, "洗濯"
+      =check_box_tag :check2 
+      = label_tag :check2, "掃除"
+      =check_box_tag :check3 
+      = label_tag :check3, "料理"
+      =check_box_tag :check4 
+      = label_tag :check4, "買い物"
+      =check_box_tag :check5 
+      = label_tag :check5, "洗い物"
   
   - @reports.each do |report|
     .detail__main-box
