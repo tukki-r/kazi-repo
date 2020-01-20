@@ -1,0 +1,32 @@
+.detail
+  .detail__fix
+    .detail__fix__user-name
+      = @user.nickname
+      さんの投稿
+      %br
+      やり忘れはありませんか？
+    .detail__fix__checkbox
+      =check_box_tag :check1 
+      = label_tag :check1, "洗濯"
+      =check_box_tag :check2 
+      = label_tag :check2, "掃除"
+      =check_box_tag :check3 
+      = label_tag :check3, "料理"
+      =check_box_tag :check4 
+      = label_tag :check4, "買い物"
+      =check_box_tag :check5 
+      = label_tag :check5, "洗い物"
+  
+  - @reports.each do |report|
+    .detail__main-box
+      .detail__mainbox__left-box
+        = report.created_at.strftime("%Y-%m-%d %H:%M")
+      .detail__mianbox__right-box
+        .detail__mianbox__right-box__report
+          = report.checkbox
+          をやりました!
+        .detail__mianbox__right-box__image
+          = image_tag report.image, class: 'main__contents__right',size: "350x200"
+  .detail__fotter
+    = paginate(@reports)
+

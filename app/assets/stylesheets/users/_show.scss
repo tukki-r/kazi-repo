@@ -1,0 +1,35 @@
+.detail{
+  margin: 170px;
+  .detail__fix{
+    text-align: center;
+    .detail__fix__user-name{
+      font-size: 35px;
+    }
+    .detail__fix__checkbox{
+      margin: 20px;
+      font: 30px;
+    }
+  }
+  .detail__main-box{
+    padding: 30px;
+    margin: 40px;
+    width: 900px;
+    border: 1px solid;
+    display: flex;
+    .detail__main-box__left-box{
+      font-size: 30px;
+    }
+    .detail__mianbox__right-box{
+      margin-left: 180px;
+      .detail__mianbox__right-box__report{
+        font-size: 30px;
+      }
+    }
+  }
+  .detail__fotter{
+    text-align: center;
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
+  }
+}
