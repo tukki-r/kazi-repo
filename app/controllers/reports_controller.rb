@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
 
   def index
-    @user = User.all.order("created_at DESC").page(params[:page]).per(5)
+    @user = User.all.includes(:reports).order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
@@ -17,6 +17,7 @@ class ReportsController < ApplicationController
     user = User.find(params[:id])
     @nickname = user.nickname
     @report = user.reports.order("created_at DESC").page(params[:page]).per(5)
+    @like = Like.new
   end
 
   private 

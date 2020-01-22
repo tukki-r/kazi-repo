@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :likes
   has_many :liked_reports, through: :likes, source: :report
   def already_liked?(report)
-    self.likes.exists?(report_id: report.ids)
+    self.likes.exists?(report_id: report.id)
   end
 end

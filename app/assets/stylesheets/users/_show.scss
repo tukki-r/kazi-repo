@@ -1,36 +1,39 @@
 .detail{
-  .detail__user-name{
+  margin: 170px;
+  .detail__fix{
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 60px;
-  }
-  .detail__main{
-    .detail__main__report{
-      display: flex;
+    .detail__fix__user-name{
+      font-size: 35px;
       margin-bottom: 50px;
-      border: solid;
-      .detail__main__report__left-box{
-        margin-right: 70px;
-        font-size: 25px;
-        .detail__main__report__left-box__created-at{
-          
-        }
-        .detail__main__report__left-box__like{
-
+    }
+    .detail__fix__checkbox{
+      margin: 20px;
+      font-size: 25px;
+      transform: scale(1.8);
+      z-index: 30;
+    }
+  }
+    .detail__main-box{
+      padding: 30px;
+      margin: 40px;
+      width: 900px;
+      border: 1px solid;
+      display: flex;
+      .detail__mainbox__left-box{
+        .detail__mainbox__left-box__created-at{
+          font-size: 25px;
         }
       }
-      .detail__main__report__right-box{
-        font-size: 25px;
-        .detail__main__report__right-box__report{
-          margin-bottom: 30px;
-        }
-        .detail__main__report__right-box__image{
-
+      .detail__mainbox__right-box{
+        margin-left: 180px;
+        .detail__mainbox__right-box__report{
+          font-size: 25px;
         }
       }
     }
+  .detail__fotter{
+    text-align: center;
+    font-size: 30px;
+    padding: 15px;
   }
-}
-.detail__fotter{
-  
 }
