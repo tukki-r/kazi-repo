@@ -12,8 +12,9 @@
       .detail__main__report__left-box{
         margin-right: 70px;
         font-size: 25px;
+        padding: 20px;
         .detail__main__report__left-box__created-at{
-          
+          margin-bottom: 30px;
         }
         .detail__main__report__left-box__like{
 
@@ -34,3 +35,7 @@
 .detail__fotter{
   
 }
+.hidden{
+  display: none;
+}
+

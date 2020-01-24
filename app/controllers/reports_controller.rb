@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
 
   def index
-    @user = User.all.includes(:reports).order("created_at DESC").page(params[:page]).per(5)
+    @user = User.all.includes(:reports).order("created_at DESC").page(params[:page]).per(12)
   end
 
   def new

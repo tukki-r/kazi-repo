@@ -1,7 +1,17 @@
 .header{
   width: 100%;
   height: 100px;
-  background-color: rgb(66, 207, 53);
+  background-color:linear-gradient(to right,rgb(44,2,13),rgb(183,177,195));
+  background-image: linear-gradient(to right, rgb(44, 2, 13), rgb(183, 177, 195));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,15 +23,18 @@
   .header__left-box{
     text-decoration: none;
     font-family: fantasy;
+    color: wheat;
   }
   .header__right-box{
     .header__right-box__name{
       text-decoration: none;
       margin-right: 25px;
+      color: wheat;
     }
     .header__right-box__btn{
       text-decoration: none;
       margin: 20px;
+      color: wheat;
     }
   }
 } 
@@ -34,10 +47,16 @@
     margin-bottom: 50px;
   }
   .main__user{
-    font-size: 30px;
+    font-size: 28px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    grid-gap: 30px;
     .main__user__list{
       margin-bottom: 40px;
       border: 2px solid;
+      border-radius: 30px;
+      padding: 15px;
       .main__user__list__btn{
         text-decoration: none;
       }
