@@ -1,0 +1,41 @@
+.detail{
+  .detail__user-name{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+  .detail__main{
+    .detail__main__report{
+      display: flex;
+      margin-bottom: 50px;
+      border: solid;
+      .detail__main__report__left-box{
+        margin-right: 70px;
+        font-size: 25px;
+        padding: 20px;
+        .detail__main__report__left-box__created-at{
+          margin-bottom: 30px;
+        }
+        .detail__main__report__left-box__like{
+
+        }
+      }
+      .detail__main__report__right-box{
+        font-size: 25px;
+        .detail__main__report__right-box__report{
+          margin-bottom: 30px;
+        }
+        .detail__main__report__right-box__image{
+
+        }
+      }
+    }
+  }
+}
+.detail__fotter{
+  
+}
+.hidden{
+  display: none;
+}
+

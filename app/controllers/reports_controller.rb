@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
 
   def index
-    @report = Report.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @user = User.all.includes(:reports).order("created_at DESC").page(params[:page]).per(12)
   end
 
   def new
@@ -10,7 +10,14 @@ class ReportsController < ApplicationController
 
   def create
     Report.create(report_params)
-    redirect_to root_path
+    redirect_to controller: 'users', action: 'show', id:current_user.id
+  end
+
+  def show
+    user = User.find(params[:id])
+    @nickname = user.nickname
+    @report = user.reports.order("created_at DESC").page(params[:page]).per(5)
+    @like = Like.new
   end
 
   private 

@@ -1,0 +1,26 @@
+.detail
+  .detail__user-name
+    = @nickname
+    さんの投稿
+  .detail__main
+    - @report.each do |report|
+      .detail__main__report
+        .detail__main__report__left-box
+          .detail__main__report__left-box__created-at
+            = report.created_at.strftime("%Y-%m-%d %H:%M")
+          .detail__main__report__left-box__like
+          - if user_signed_in?
+            = render 'likes/like', report: report
+          - else
+            = icon('far','heart',class: 'icon')
+          .detail__main__report__left-box__like-count
+            = report.likes.count
+            いいね！
+        .detail__main__report__right-box
+          .detail__main__report__right-box__report
+            = report.checkbox
+            をやりました!
+          .detail__main__report__right-box__image
+            = image_tag report.image, class: 'main__contents__right',size: "350x200"
+  .detail__fotter
+    = paginate(@report)
