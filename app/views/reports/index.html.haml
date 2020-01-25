@@ -7,11 +7,11 @@
         = link_to report_path(user.id), class:"main__user__list__btn" do
           ユーザー名：
           = user.nickname 
-          さん
         .main__user__report-count
           投稿数:
           = user.reports.count
         .main__user__like-count
           いいね:
+          = user.likes.count
   .main__footer
     = paginate(@user)
