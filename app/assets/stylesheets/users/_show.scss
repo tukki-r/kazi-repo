@@ -4,30 +4,38 @@
     text-align: center;
     .detail__fix__user-name{
       font-size: 35px;
+      margin-bottom: 50px;
     }
     .detail__fix__checkbox{
       margin: 20px;
-      font: 30px;
+      font-size: 25px;
+      transform: scale(1.8);
+      z-index: 30;
     }
   }
-  .detail__main-box{
-    padding: 30px;
-    margin: 40px;
-    width: 900px;
-    border: 1px solid;
-    display: flex;
-    .detail__main-box__left-box{
-      font-size: 30px;
-    }
-    .detail__mianbox__right-box{
-      margin-left: 180px;
-      .detail__mianbox__right-box__report{
-        font-size: 30px;
+    .detail__main-box{
+      padding: 30px;
+      margin: 40px;
+      width: 900px;
+      border: 1px solid;
+      display: flex;
+      .detail__mainbox__left-box{
+        .detail__mainbox__left-box__created-at{
+          font-size: 25px;
+          margin-bottom: 30px;
+        }
+        .detail__mainbox__left-box__like{
+          font-size: 25px;
+        }
+      }
+      .detail__mainbox__right-box{
+        margin-left: 180px;
+        .detail__mainbox__right-box__report{
+          font-size: 25px;
+        }
       }
     }
-  }
   .detail__fotter{
-    text-align: center;
     text-align: center;
     font-size: 30px;
     padding: 15px;

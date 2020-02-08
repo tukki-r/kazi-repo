@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :reports
+  has_many :likes
+  has_many :liked_reports, through: :likes, source: :report
+  def already_liked?(report)
+    self.likes.exists?(report_id: report.id)
+  end
 end
