@@ -1,0 +1,13 @@
+- if current_user.already_liked?(report)
+  %label
+    = icon('fas','heart',class: 'icon')
+    .hidden
+      = link_to "いいね済み", report_like_path(report_id: report.id), {method: "delete", remote: true}
+- else
+  %label
+    = icon('far','heart',class: 'icon')
+    .hidden
+      = button_to 'いいね', report_likes_path(report)
+    
+
+    
