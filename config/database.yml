@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: kazi-repo_production
-  username: kazi-repo
-  password: <%= ENV['KAZI-REPO_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
