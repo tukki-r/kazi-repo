@@ -5,7 +5,6 @@
     - @user.each do |user|
       .main__user__list
         = link_to report_path(user.id), class:"main__user__list__btn" do
-          ユーザー名：
           = user.nickname 
         .main__user__report-count
           投稿数:
