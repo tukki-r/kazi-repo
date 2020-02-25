@@ -2,6 +2,8 @@
 ![kazi-repo](https://user-images.githubusercontent.com/57993375/75129454-64c3d080-570c-11ea-9079-13b53a972cda.jpg)
 # URL
 - http://18.176.227.244:3000/
+- login: 12@34
+- password: 123456 
 # Overview
 - 家事レポは行った家事を投稿できるアプリです
   (kazi-repo is an app that can post housework)
